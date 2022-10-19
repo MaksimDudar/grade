@@ -1,32 +1,35 @@
-<div id="<%= dom_id master %>">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="<%= dom_id master %>">
   <p>
-    <strong>Strana:</strong>
-    <%= master.strana %>
-  </p>
-
-  <p>
-    <strong>Strana1:</strong>
+    <strong>Страна отправления:</strong>
+    <%= master.strana %> -
+    <strong>Страна назначения:</strong>
     <%= master.strana1 %>
   </p>
 
   <p>
-    <strong>Truck:</strong>
+    <strong>Подвижной состав:</strong>
     <%= master.truck %>
   </p>
 
   <p>
-    <strong>Driver:</strong>
+    <strong>Водитель:</strong>
     <%= master.driver %>
   </p>
 
   <p>
-    <strong>Manager:</strong>
+    <strong>Логист:</strong>
     <%= master.manager %>
   </p>
 
   <p>
-    <strong>Rating:</strong>
+    <strong>Оценка:</strong>
     <%= master.rating %>
   </p>
 
+      </div>
+    </div>
+  </div>
 </div>

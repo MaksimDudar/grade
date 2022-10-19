@@ -1,4 +1,7 @@
-<%= form_with(model: master) do |form| %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= form_with(model: master) do |form| %>
   <% if master.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(master.errors.count, "error") %> prohibited this master from being saved:</h2>
@@ -10,10 +13,22 @@
       </ul>
     </div>
   <% end %>
+      </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
   <div>
-    <%= form.label :strana, style: "display: block" %>
-    <%= form.text_field :strana %>
+    <%= form.label :strana, "Страна отправления", style: "display: block" %>
+    <select id = "strana" name = "master[strana]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
+  <option selected>Выбери страну</option>
+  <option value="BY">BY</option>
+  <option value="RUS">RUS</option>
+  <option value="KZ">KZ</option>
+    </select>
+
   </div>
 
   <div>
@@ -45,3 +60,6 @@
     <%= form.submit %>
   </div>
 <% end %>
+    </div>
+  </div>
+</div>
