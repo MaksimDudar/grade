@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  strana: MyString
+  strana1: MyString
+  truck: MyString
+  driver: MyString
+  manager: MyString
+  rating: 1
+
+two:
+  strana: MyString
+  strana1: MyString
+  truck: MyString
+  driver: MyString
+  manager: MyString
+  rating: 1

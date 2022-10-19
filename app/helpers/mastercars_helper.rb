@@ -1,0 +1,2 @@
+module MastercarsHelper
+end
