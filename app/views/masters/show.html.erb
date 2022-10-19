@@ -1,17 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-
-
-<p style="color: green"><%= notice %></p>
-
-<%= render @master %>
+     <br><h5>Отзыв № <%= @master.id %></h5> 
+  <p> <%= render @master %> </p>
 
 <div>
-  <%= link_to "Edit this master", edit_master_path(@master) %> |
-  <%= link_to "Back to masters", masters_path %>
+  <%= link_to "Исправить", edit_master_path(@master)%> |
+  <%= link_to "Назад", masters_path %>
 
-  <%= button_to "Destroy this master", @master, method: :delete %>
+  <p><%= button_to "Удалить отзыв", @master, method: :delete, class:"btn btn-outline-warning btn-sm"%></p>
 </div>
 
     </div>

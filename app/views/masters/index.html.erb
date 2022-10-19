@@ -7,14 +7,14 @@
 
 <div id="masters">
   <% @masters.each do |master| %>
-    <%= render master %>
+    <% render master %>
     <p>
-      <%= link_to "Show this master", master %>
+      <%= link_to "Отзыв № #{master.id}", master %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "Новая перевозка", new_master_path %>
+<%= link_to "Новый отзыв", new_master_path %>
     </div>
   </div>
 </div>
