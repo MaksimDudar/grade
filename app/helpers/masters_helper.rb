@@ -4,6 +4,7 @@ module MastersHelper
     @masters.each do |master|
     arr << master.rating
     end
-    arr.inject{ |sum, el| sum + el }.to_f / arr.size
+    f = arr.inject{ |sum, el| sum + el }.to_f / arr.size
+    f.round(2)
   end
 end
