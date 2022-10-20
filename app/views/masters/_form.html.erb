@@ -23,20 +23,19 @@
   <div>
     <%= form.label :strana, "Страна отправления",class:"fw-semibold", style: "display: block" %>
     <select id = "strana" name = "master[strana]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
-  <option selected>Выбери страну</option>
+  <option value="">Выбери страну</option>
   <option value="BY">BY</option>
   <option value="RUS">RUS</option>
   <option value="KZ">KZ</option>
   <option value="UZ">UZ</option>
   <option value="KG">KG</option>
-
     </select>
   </div>
 
   <div>
     <%= form.label :strana1, "Страна назначения",class:"fw-semibold", style: "display: block" %>
     <select id = "strana1" name = "master[strana1]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
-  <option selected>Выбери страну</option>
+  <option value="">Выбери страну</option>
   <option value="BY">BY</option>
   <option value="RUS">RUS</option>
   <option value="KZ">KZ</option>
@@ -48,7 +47,7 @@
   <div>
     <%= form.label :truck, "Подвижной состав",class:"fw-semibold", style: "display: block" %>
     <select id = "truck" name = "master[truck]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
-  <option selected>Оцени подвижной состав</option>
+  <option value="">Оцени подвижной состав</option>
   <option value="Отличный">Отличный</option>
   <option value="Ху#вый">Ху#вый</option>
   <option value="Нормальный">Нормальный</option>
@@ -60,35 +59,35 @@
   <div>
     <%= form.label :driver, "Водитель",class:"fw-semibold", style: "display: block" %>
     <select id = "driver" name = "master[driver]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
-  <option selected>Оцени водителя</option>
+  <option value="">Оцени водителя</option>
   <option value="Шикарен">Шикарен</option>
   <option value="Отличный">Отличный</option>
   <option value="Мастер">Мастер</option>
   <option value="Пиз#бол">Пиз#бол</option>
   <option value="Ass своего дела">Ass своего дела</option>
   <option value="ПрофессиANAL">ПрофессиANAL</option>
-
+  <option value="Тоже Долбоиб">Тоже Долбоиб</option>
     </select>
   </div>
 
   <div>
     <%= form.label :manager, "Логист",class:"fw-semibold", style: "display: block" %>
     <select id = "manager" name = "master[manager]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
-  <option selected>Оцени логиста</option>
+  <option value="">Оцени логиста</option>
   <option value="Мастер своего дела">Мастер своего дела</option>
   <option value="Бог перевозок">Бог перевозок</option>
   <option value="Мы не общались">Мы не общались</option>
   <option value="Перевозка закончилась и слава богу">Перевозка закончилась и слава богу</option>
   <option value="Просто ПИ#Ц">Просто ПИ#Ц</option>
   <option value="Я надеюсь его уволили">Я надеюсь его уволили</option>
-
+  <option value="Долбоиб">Долбоиб</option>
     </select>
   </div>
 
   <div>
     <%= form.label :rating, "Оценка",class:"fw-semibold", style: "display: block" %>
     <select id = "rating" name = "master[rating]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
-  <option selected>Поставь оценку</option>
+  <option value="">Поставь оценку</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -99,6 +98,7 @@
   <option value="8">8</option>
   <option value="9">9</option>
   <option value="10">10</option>
+  </select>
   </div>
 
   <div>

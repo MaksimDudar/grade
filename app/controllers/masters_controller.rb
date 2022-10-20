@@ -67,4 +67,5 @@ class MastersController < ApplicationController
     def master_params
       params.require(:master).permit(:strana, :strana1, :truck, :driver, :manager, :rating)
     end
+    
 end
