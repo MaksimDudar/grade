@@ -1,10 +1,15 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @card %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+     <br><h5>Отзыв № <%= @card.id %></h5>
+  <p><%= render @card %> </p>
 
 <div>
-  <%= link_to "Edit this card", edit_card_path(@card) %> |
-  <%= link_to "Back to cards", cards_path %>
-
-  <%= button_to "Destroy this card", @card, method: :delete %>
+  <p><a class="btn btn-outline-warning btn-sm" href="/cards" role="button">Задний ход</a></p>
+  <!-- link_to "Edit this card", edit_card_path(@card)
+  link_to "Back to cards", cards_path
+  button_to "Destroy this card", @card, method: :delete -->
+</div>
+    </div>
+  </div>
 </div>

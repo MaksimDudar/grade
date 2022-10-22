@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p style="color: green"><%= notice %></p>
 
-<h1>Cards</h1>
+<h3>CardiTrans (<%= send(:range2) %>)</h3>
+<p> <%= link_to "Новый отзыв", new_card_path %> </p><hr>
 
 <div id="cards">
   <% @cards.each do |card| %>
-    <%= render card %>
+    <% render card %>
     <p>
-      <%= link_to "Show this card", card %>
+      <%= link_to "Отзыв № #{card.id}", card %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New card", new_card_path %>
+    </div>
+  </div>
+</div>

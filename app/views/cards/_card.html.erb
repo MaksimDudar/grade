@@ -1,32 +1,34 @@
-<div id="<%= dom_id card %>">
-  <p>
-    <strong>Strana:</strong>
-    <%= card.strana %>
-  </p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="<%= dom_id card %>">
+        <p>
+          <strong>Страна отправления:</strong>
+          <%= card.strana %> -
+          <strong>Страна назначения:</strong>
+          <%= card.strana1 %>
+        </p>
 
   <p>
-    <strong>Strana1:</strong>
-    <%= card.strana1 %>
-  </p>
-
-  <p>
-    <strong>Truck:</strong>
+    <strong>Подвижной состав:</strong>
     <%= card.truck %>
   </p>
 
   <p>
-    <strong>Driver:</strong>
+    <strong>Водитель:</strong>
     <%= card.driver %>
   </p>
 
   <p>
-    <strong>Manager:</strong>
+    <strong>Логист:</strong>
     <%= card.manager %>
   </p>
 
   <p>
-    <strong>Rating:</strong>
+    <strong>Оценка:</strong>
     <%= card.rating %>
   </p>
-
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
 <%= form_with(model: card) do |form| %>
   <% if card.errors.any? %>
     <div style="color: red">
@@ -10,38 +13,102 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :strana, style: "display: block" %>
-    <%= form.text_field :strana %>
+    </div>
   </div>
+</div>
 
-  <div>
-    <%= form.label :strana1, style: "display: block" %>
-    <%= form.text_field :strana1 %>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
 
-  <div>
-    <%= form.label :truck, style: "display: block" %>
-    <%= form.text_field :truck %>
-  </div>
+      <div>
+        <%= form.label :strana, "Страна отправления",class:"fw-semibold", style: "display: block" %>
+        <select id = "strana" name = "card[strana]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
+      <option selected disabled value="">Выбери страну</option>
+      <option value="BY">BY</option>
+      <option value="RUS">RUS</option>
+      <option value="KZ">KZ</option>
+      <option value="UZ">UZ</option>
+      <option value="KG">KG</option>
+      <option value="ЯУРОПА">ЯУРОПА</option>
+        </select>
+      </div>
 
-  <div>
-    <%= form.label :driver, style: "display: block" %>
-    <%= form.text_field :driver %>
-  </div>
+      <div>
+        <%= form.label :strana1, "Страна назначения",class:"fw-semibold", style: "display: block" %>
+        <select id = "strana1" name = "card[strana1]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
+      <option value="">Выбери страну</option>
+      <option value="BY">BY</option>
+      <option value="RUS">RUS</option>
+      <option value="KZ">KZ</option>
+      <option value="UZ">UZ</option>
+      <option value="KG">KG</option>
+      <option value="ЯУРОПА">ЯУРОПА</option>
 
-  <div>
-    <%= form.label :manager, style: "display: block" %>
-    <%= form.text_field :manager %>
-  </div>
+        </select>
+      </div>
 
-  <div>
-    <%= form.label :rating, style: "display: block" %>
-    <%= form.number_field :rating %>
-  </div>
+      <div>
+        <%= form.label :truck, "Подвижной состав",class:"fw-semibold", style: "display: block" %>
+        <select id = "truck" name = "card[truck]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
+      <option value="">Оцени подвижной состав</option>
+      <option value="Отличный">Отличный</option>
+      <option value="Ху#вый">Ху#вый</option>
+      <option value="Нормальный">Нормальный</option>
+      <option value="Видели и лучше">Видели и лучше</option>
+      <option value="Довез и слава Богу">Довез и слава Богу</option>
+        </select>
+      </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+      <div>
+        <%= form.label :driver, "Водитель",class:"fw-semibold", style: "display: block" %>
+        <select id = "driver" name = "card[driver]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
+      <option value="">Оцени водителя</option>
+      <option value="Шикарен">Шикарен</option>
+      <option value="Отличный">Отличный</option>
+      <option value="Мастер">Мастер</option>
+      <option value="Пиз#бол">Пиз#бол</option>
+      <option value="Ass своего дела">Ass своего дела</option>
+      <option value="ПрофессиANAL">ПрофессиANAL</option>
+      <option value="Долбоиб">Долбоиб</option>
+        </select>
+      </div>
+
+      <div>
+        <%= form.label :manager, "Логист",class:"fw-semibold", style: "display: block" %>
+        <select id = "manager" name = "card[manager]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
+      <option value="">Оцени логиста</option>
+      <option value="Мастер своего дела">Мастер своего дела</option>
+      <option value="Бог перевозок">Бог перевозок</option>
+      <option value="Мы не общались">Мы не общались</option>
+      <option value="Перевозка закончилась и слава богу">Перевозка закончилась и слава богу</option>
+      <option value="Просто ПИ#Ц">Просто ПИ#Ц</option>
+      <option value="Я надеюсь его уволили">Я надеюсь его уволили</option>
+      <option value="Тоже Долбоиб">Тоже Долбоиб</option>
+        </select>
+      </div>
+
+      <div>
+        <%= form.label :rating, "Оценка",class:"fw-semibold", style: "display: block" %>
+        <select id = "rating" name = "card[rating]" class="form-select form-select-md mb-3" aria-label=".form-select-md example">
+      <option value="">Поставь оценку</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      </select>
+      </div>
+
+      <div>
+        <%= form.submit 'Создать', class:"btn btn-sm btn-danger rounded-pill" %>
+      </div>
+    <% end %>
+        </div>
+      </div>
+    </div>
