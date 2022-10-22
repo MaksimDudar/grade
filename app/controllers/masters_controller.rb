@@ -65,7 +65,7 @@ class MastersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def master_params
-      params.require(:master).permit(:strana, :strana1, :truck, :driver, :manager, :rating)
+      params.require(:master).permit(:id, :strana, :strana1, :truck, :driver, :manager, :rating)
     end
 
 end
