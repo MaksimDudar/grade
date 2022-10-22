@@ -4,19 +4,14 @@
       <p style="color: green"><%= notice %></p>
 
 <h3>МастерЛогистик (<%= send(:range) %>)</h3>
+<p> <%= link_to "Новый отзыв", new_master_path %> </p><hr>
+
 <% @masters.each do |master| %>
   <% render master %>
+  <p>
+    <%= link_to "Отзыв № #{master.id}",  master %>
+  </p>
 <% end %>
-<p> <%= link_to "Новый отзыв", new_master_path %> </p><hr>
-<div id="masters">
-  <% @masters.each do |master| %>
-    <% render master %>
-    <p>
-      <%= link_to "Отзыв № #{master.id}", master %>
-    </p>
-  <% end %>
-</div>
-
     </div>
   </div>
 </div>

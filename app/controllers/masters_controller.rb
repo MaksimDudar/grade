@@ -25,7 +25,7 @@ class MastersController < ApplicationController
 
     respond_to do |format|
       if @master.save
-        format.html { redirect_to master_url(@master), notice: "Master was successfully created." }
+        format.html { redirect_to master_url(@master), notice: "Отзыв родился!" }
         format.json { render :show, status: :created, location: @master }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -67,5 +67,5 @@ class MastersController < ApplicationController
     def master_params
       params.require(:master).permit(:strana, :strana1, :truck, :driver, :manager, :rating)
     end
-    
+
 end

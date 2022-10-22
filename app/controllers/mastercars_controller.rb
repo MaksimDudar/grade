@@ -25,7 +25,7 @@ class MastercarsController < ApplicationController
 
     respond_to do |format|
       if @mastercar.save
-        format.html { redirect_to mastercar_url(@mastercar), notice: "Mastercar was successfully created." }
+        format.html { redirect_to mastercar_url(@mastercar), notice: "Отзыв родился!" }
         format.json { render :show, status: :created, location: @mastercar }
       else
         format.html { render :new, status: :unprocessable_entity }

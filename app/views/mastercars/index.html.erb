@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p style="color: green"><%= notice %></p>
 
-<h1>Mastercars</h1>
+<h3>МастерКаргоРус (<%= send(:range1) %>)</h3>
+<p> <%= link_to "Новый отзыв", new_mastercar_path %> </p><hr>
 
 <div id="mastercars">
   <% @mastercars.each do |mastercar| %>
-    <%= render mastercar %>
+    <% render mastercar %>
     <p>
-      <%= link_to "Show this mastercar", mastercar %>
+      <%= link_to "Отзыв № #{mastercar.id}", mastercar %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New mastercar", new_mastercar_path %>
+    </div>
+  </div>
+</div>
