@@ -23,7 +23,8 @@ class CardsController < ApplicationController
   # POST /cards or /cards.json
   def create
     @card = Card.new(card_params)
-    redirect_to @card
+    if @card.save
+      redirect_to "/cards"
     # respond_to do |format|
     #   if @card.save
     #     format.html { redirect_to card_url(@card), notice: "Отзыв родился!" }
@@ -32,7 +33,7 @@ class CardsController < ApplicationController
     #     format.html { render :new, status: :unprocessable_entity }
     #     format.json { render json: @card.errors, status: :unprocessable_entity }
     #   end
-    # end
+    end
   end
 
   # PATCH/PUT /cards/1 or /cards/1.json

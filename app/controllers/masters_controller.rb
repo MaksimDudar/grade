@@ -23,16 +23,16 @@ class MastersController < ApplicationController
   # POST /masters or /masters.json
   def create
     @master = Master.new(master_params)
-    redirect_to @master
     # respond_to do |format|
-    #   if @master.save
+      if @master.save
+    redirect_to "/masters"
     #     format.html { redirect_to master_url(@master), notice: "Отзыв родился!" }
     #     format.json { render :show, status: :created, location: @master }
-    #   else
-    #     format.html { render :new, status: :unprocessable_entity }
-    #     format.json { render json: @master.errors, status: :unprocessable_entity }
-    #   end
-    # end
+      # else
+      #   format.html { render :new, status: :unprocessable_entity }
+      #   format.json { render json: @master.errors, status: :unprocessable_entity }
+      # end
+    end
   end
 
   # PATCH/PUT /masters/1 or /masters/1.json

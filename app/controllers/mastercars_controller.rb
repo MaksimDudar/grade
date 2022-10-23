@@ -23,7 +23,8 @@ class MastercarsController < ApplicationController
   # POST /mastercars or /mastercars.json
   def create
     @mastercar = Mastercar.new(mastercar_params)
-    redirect_to @mastercar
+    if @mastercar.save
+      redirect_to "/mastercars"
     # respond_to do |format|
     #   if @mastercar.save
     #     format.html { redirect_to mastercar_url(@mastercar), notice: "Отзыв родился!" }
@@ -32,7 +33,7 @@ class MastercarsController < ApplicationController
     #     format.html { render :new, status: :unprocessable_entity }
     #     format.json { render json: @mastercar.errors, status: :unprocessable_entity }
     #   end
-    # end
+    end
   end
 
   # PATCH/PUT /mastercars/1 or /mastercars/1.json
