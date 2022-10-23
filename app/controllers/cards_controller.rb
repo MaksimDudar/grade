@@ -4,6 +4,7 @@ class CardsController < ApplicationController
   # GET /cards or /cards.json
   def index
     @cards = Card.all
+    @cards = Card.order(created_at: :desc)
   end
 
   # GET /cards/1 or /cards/1.json
@@ -22,16 +23,16 @@ class CardsController < ApplicationController
   # POST /cards or /cards.json
   def create
     @card = Card.new(card_params)
-
-    respond_to do |format|
-      if @card.save
-        format.html { redirect_to card_url(@card), notice: "Отзыв родился!" }
-        format.json { render :show, status: :created, location: @card }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @card.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to @card
+    # respond_to do |format|
+    #   if @card.save
+    #     format.html { redirect_to card_url(@card), notice: "Отзыв родился!" }
+    #     format.json { render :show, status: :created, location: @card }
+    #   else
+    #     format.html { render :new, status: :unprocessable_entity }
+    #     format.json { render json: @card.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /cards/1 or /cards/1.json

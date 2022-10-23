@@ -4,6 +4,7 @@ class MastercarsController < ApplicationController
   # GET /mastercars or /mastercars.json
   def index
     @mastercars = Mastercar.all
+    @mastercars = Mastercar.order(created_at: :desc)
   end
 
   # GET /mastercars/1 or /mastercars/1.json
@@ -22,16 +23,16 @@ class MastercarsController < ApplicationController
   # POST /mastercars or /mastercars.json
   def create
     @mastercar = Mastercar.new(mastercar_params)
-
-    respond_to do |format|
-      if @mastercar.save
-        format.html { redirect_to mastercar_url(@mastercar), notice: "Отзыв родился!" }
-        format.json { render :show, status: :created, location: @mastercar }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @mastercar.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to @mastercar
+    # respond_to do |format|
+    #   if @mastercar.save
+    #     format.html { redirect_to mastercar_url(@mastercar), notice: "Отзыв родился!" }
+    #     format.json { render :show, status: :created, location: @mastercar }
+    #   else
+    #     format.html { render :new, status: :unprocessable_entity }
+    #     format.json { render json: @mastercar.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /mastercars/1 or /mastercars/1.json
