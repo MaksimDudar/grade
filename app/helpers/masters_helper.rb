@@ -7,4 +7,9 @@ module MastersHelper
     f = arr.inject{ |sum, el| sum + el }.to_f / arr.size
     f.round(2)
   end
+
+  def proc
+    range * 100 / 10
+  end
+
 end
