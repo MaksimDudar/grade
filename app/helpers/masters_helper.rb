@@ -9,7 +9,8 @@ module MastersHelper
   end
 
   def proc
-    range * 100 / 10
+    t = range * 100 / 10
+    t.round(2)
   end
 
 end
