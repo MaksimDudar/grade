@@ -9,6 +9,7 @@ module CardsHelper
   end
 
   def proc2
-    range2 * 100 / 10
+    t = range2 * 100 / 10
+    t.round(2)
   end
 end

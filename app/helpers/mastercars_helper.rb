@@ -9,6 +9,7 @@ module MastercarsHelper
   end
 
   def proc1
-    range1 * 100 / 10
+    t = range1 * 100 / 10
+    t.round(2)
   end
 end
